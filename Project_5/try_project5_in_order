@@ -1,0 +1,52 @@
+#Test script for project 5.
+#Author: Jing Wang, for Program Design
+#To use the script, copy it into the same directory as your scource file
+# Set execute permission for the file by issuing the command:
+# chmod +x try_project5_inOrder
+# Compile your program, producing a.out as the executable
+# To run the script, type
+# ./try_project5_inOrder
+# The user input will not be shown on the screen
+echo '==================================================='
+./a.out TIME 
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo './a.out TIME'
+echo 'Output: Not in Order'
+echo '----------------------------------------------------'
+./a.out No 
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo './a.out No'
+echo 'Output: In order'
+echo '----------------------------------------------------'
+./a.out 78length
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo './a.out 78length'
+echo 'Output: Not in order'
+echo '----------------------------------------------------'
+./a.out chow 
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo './a.out chow'
+echo 'Output: In order'
+echo '----------------------------------------------------'
+./a.out zone8
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo './a.out zone8'
+echo 'Output: Not in order'
+echo '----------------------------------------------------'
+./a.out
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo './a.out'
+echo 'Output: Incorrect number of arguments. Usage: ./a.out word'
+echo '----------------------------------------------------'
+./a.out time zone
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo './a.out time zone'
+echo 'Output: Incorrect number of arguments. Usage: ./a.out word'
+echo '----------------------------------------------------'

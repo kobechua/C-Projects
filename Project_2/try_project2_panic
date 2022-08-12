@@ -1,0 +1,106 @@
+#!/bin/bash
+
+# Written by Mauricio Pamplona Segundo for Program Design
+# try_project2_panic is a Unix shell script that will be used to test project 2.
+# To use the script, copy it into the same directory as your scource file
+# Set execute permission for the file by issuing the command:
+# chmod +x try_project2_panic
+# Compile your program, producing a.out as the executable
+# To run the script, type 
+# ./try_project2_panic
+# The user input from the script will not be shown on the screen.
+# Compare the results from your program with the expected results on the test cases.
+echo '===================================================='
+./a.out <<-EndOfInput
+3 4 17
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo 'Enter item price: 3'
+echo 'Enter number of units: 4'
+echo 'Enter money amount: 17'
+echo 'Needs 13 dollar(s) to complete the purchase!'
+echo '===================================================='
+./a.out <<-EndOfInput
+1 1 2
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo 'Enter item price: 1'
+echo 'Enter number of units: 1'
+echo 'Enter money amount: 2'
+echo 'Has enough money!'
+echo '===================================================='
+./a.out <<-EndOfInput
+1 1 1
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo 'Enter item price: 1'
+echo 'Enter number of units: 1'
+echo 'Enter money amount: 1'
+echo 'Has enough money!'
+echo '===================================================='
+./a.out <<-EndOfInput
+1000 1000 0
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo 'Enter item price: 1000'
+echo 'Enter number of units: 1000'
+echo 'Enter money amount: 0'
+echo 'Needs 500500000 dollar(s) to complete the purchase!'
+echo '===================================================='
+./a.out <<-EndOfInput
+1000 1000 500499999
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo 'Enter item price: 1000'
+echo 'Enter number of units: 1000'
+echo 'Enter money amount: 500499999'
+echo 'Needs 1 dollar(s) to complete the purchase!'
+echo '===================================================='
+./a.out <<-EndOfInput
+20 3 43
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo 'Enter item price: 20'
+echo 'Enter number of units: 3'
+echo 'Enter money amount: 43'
+echo 'Needs 77 dollar(s) to complete the purchase!'
+echo '===================================================='
+./a.out <<-EndOfInput
+0 1 1
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo 'Enter item price: 0'
+echo 'Invalid price 0'
+echo 'Price must be greater than 0'
+echo '===================================================='
+./a.out <<-EndOfInput
+1 0 1
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo 'Enter item price: 1'
+echo 'Enter number of units: 0'
+echo 'Invalid number of units 0'
+echo 'Number of units must be greater than 0'
+echo '===================================================='
+./a.out <<-EndOfInput
+1 1 -1
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo 'Enter item price: 1'
+echo 'Enter number of units: 1'
+echo 'Enter money amount: -1'
+echo 'Invalid money amount -1'
+echo 'Money amount must be greater than or equal to 0'
+echo '----------------------------------------------------'
+
+
+

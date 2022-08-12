@@ -1,0 +1,199 @@
+#!/bin/bash
+
+# Written by Mauricio Pamplona Segundo & Azim Ibragimov for Program Design
+# try_project6_suffix is a Unix shell script that will be used to test project 6.
+# To use the script, copy it into the same directory as your scource file
+# Set execute permission for the file by issuing the command:
+# chmod +x try_project6_suffix
+# Compile your program, producing a.out as the executable
+# To run the script, type 
+# ./try_project6_suffix
+# The user input from the script will not be shown on the screen.
+# Compare the results from your program with the expected results on the test cases.
+
+COUNT=0
+function newCase {
+	tput setaf 2
+	echo '===================================================='
+	tput setaf 3
+	COUNT=$((COUNT+1))
+	echo 'Example #'$COUNT
+	tput sgr 0
+}
+function endCase {
+    tput setaf 2
+    echo '===================================================='
+    tput sgr 0
+    echo;echo;echo;
+}
+
+newCase
+./a.out project6_files/{fileA1.txt,fileA2.txt,fileA3.txt} <<-EndOfInput
+20
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+cat << EOF
+Enter the value of M: 20
+project6_files/fileA1.txt: dogcatrat
+project6_files/fileA2.txt: chimpanzee
+project6_files/fileA3.txt: chimpanzeewoodpecker
+EOF
+endCase
+
+
+newCase
+./a.out project6_files/{fileA1.txt,fileA2.txt,fileA3.txt} <<-EndOfInput
+30
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+cat << EOF
+Enter the value of M: 30
+project6_files/fileA1.txt: dogcatrat
+project6_files/fileA2.txt: chimpanzee
+project6_files/fileA3.txt: woodpecker
+EOF
+endCase
+
+
+newCase
+./a.out project6_files/{fileA1.txt,fileA2.txt,fileA3.txt} <<-EndOfInput
+40
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+cat << EOF
+Enter the value of M: 40
+project6_files/fileA1.txt: dogcatrat
+project6_files/fileA2.txt: woodpeckerhippopotamuschimpanzee
+project6_files/fileA3.txt: hippopotamuschimpanzeewoodpecker
+EOF
+endCase
+
+newCase
+./a.out project6_files/{fileB1.txt,fileB2.txt,fileB3.txt,fileB4.txt,fileB5.txt,fileB6.txt,fileB7.txt,fileB8.txt,fileB9.txt,fileB10.txt} <<-EndOfInput
+20
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+cat << EOF
+Enter the value of M: 20
+project6_files/fileB1.txt: gurcloukydrebktyp
+project6_files/fileB2.txt: hkxhyugjhxvl
+project6_files/fileB3.txt: ujoireo
+project6_files/fileB4.txt: rdpmudfbgfgem
+project6_files/fileB5.txt: jsbtdxflyapidjh
+project6_files/fileB6.txt: mxmrsndlqtneml
+project6_files/fileB7.txt: dqwxphxlmv
+project6_files/fileB8.txt: wemuxodilliznfrw
+project6_files/fileB9.txt: wqkmslskowhrgjvcjes
+project6_files/fileB10.txt: nqtubgpctbdytyeltun
+EOF
+endCase
+
+newCase
+./a.out project6_files/{fileB1.txt,fileB2.txt,fileB3.txt,fileB4.txt,fileB5.txt,fileB6.txt,fileB7.txt,fileB8.txt,fileB9.txt,fileB10.txt} <<-EndOfInput
+21
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+cat << EOF
+Enter the value of M: 21
+project6_files/fileB1.txt: gurcloukydrebktyp
+project6_files/fileB2.txt: hkxhyugjhxvl
+project6_files/fileB3.txt: ireo
+project6_files/fileB4.txt: udfbgfgem
+project6_files/fileB5.txt: jsbtdxflyapidjh
+project6_files/fileB6.txt: qkjwrinmxmrsndlqtneml
+project6_files/fileB7.txt: dqwxphxlmv
+project6_files/fileB8.txt: wemuxodilliznfrw
+project6_files/fileB9.txt: wqkmslskowhrgjvcjes
+project6_files/fileB10.txt: nqtubgpctbdytyeltun
+EOF
+endCase
+
+newCase
+./a.out project6_files/{fileB1.txt,fileB2.txt,fileB3.txt,fileB4.txt,fileB5.txt,fileB6.txt,fileB7.txt,fileB8.txt,fileB9.txt,fileB10.txt} <<-EndOfInput
+25
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+cat << EOF
+Enter the value of M: 25
+project6_files/fileB1.txt: gurcloukydrebktyp
+project6_files/fileB2.txt: hkxhyugjhxvl
+project6_files/fileB3.txt: ujoireo
+project6_files/fileB4.txt: udfbgfgem
+project6_files/fileB5.txt: jsbtdxflyapidjh
+project6_files/fileB6.txt: qkjwrinmxmrsndlqtneml
+project6_files/fileB7.txt: fwsnhvwsdqwxphxlmv
+project6_files/fileB8.txt: wemuxodilliznfrw
+project6_files/fileB9.txt: wqkmslskowhrgjvcjes
+project6_files/fileB10.txt: nqtubgpctbdytyeltun
+EOF
+endCase
+
+newCase
+./a.out project6_files/{fileB1.txt,fileB2.txt,fileB3.txt,fileB4.txt,fileB5.txt,fileB6.txt,fileB7.txt,fileB8.txt,fileB9.txt,fileB10.txt} <<-EndOfInput
+30
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+cat << EOF
+Enter the value of M: 30
+project6_files/fileB1.txt: gurcloukydrebktyp
+project6_files/fileB2.txt: hkxhyugjhxvl
+project6_files/fileB3.txt: ireo
+project6_files/fileB4.txt: fewkfthyifavyoatfrdpmudfbgfgem
+project6_files/fileB5.txt: jsbtdxflyapidjh
+project6_files/fileB6.txt: mxmrsndlqtneml
+project6_files/fileB7.txt: fwsnhvwsdqwxphxlmv
+project6_files/fileB8.txt: ztjkeonafqwemuxodilliznfrw
+project6_files/fileB9.txt: cmwwamaowqkmslskowhrgjvcjes
+project6_files/fileB10.txt: nqtubgpctbdytyeltun
+EOF
+endCase
+
+newCase
+./a.out project6_files/{fileB1.txt,fileB2.txt,fileB3.txt,fileB4.txt,fileB5.txt,fileB6.txt,fileB7.txt,fileB8.txt,fileB9.txt,fileB10.txt} <<-EndOfInput
+40
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+cat << EOF
+Enter the value of M: 40
+project6_files/fileB1.txt: utvpaslojpsgurcloukydrebktyp
+project6_files/fileB2.txt: lbrodevlplhngxvzrfofhkxhyugjhxvl
+project6_files/fileB3.txt: iebxbhdrjzplspxbcpypflmydkfujoireo
+project6_files/fileB4.txt: udfbgfgem
+project6_files/fileB5.txt: kbuwghrhklgbdbnaryojsbtdxflyapidjh
+project6_files/fileB6.txt: qkjwrinmxmrsndlqtneml
+project6_files/fileB7.txt: dqwxphxlmv
+project6_files/fileB8.txt: aoauqxrgztjkeonafqwemuxodilliznfrw
+project6_files/fileB9.txt: wqkmslskowhrgjvcjes
+project6_files/fileB10.txt: nqtubgpctbdytyeltun
+EOF
+endCase
+
+newCase
+./a.out project6_files/{fileB1.txt,fileB2.txt,fileB3.txt,fileB4.txt,fileB5.txt,fileB6.txt,fileB7.txt,fileB8.txt,fileB9.txt,fileB10.txt} <<-EndOfInput
+50
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+cat << EOF
+Enter the value of M: 50
+project6_files/fileB1.txt: gurcloukydrebktyp
+project6_files/fileB2.txt: uimojtegymvwjnlbrodevlplhngxvzrfofhkxhyugjhxvl
+project6_files/fileB3.txt: ireo
+project6_files/fileB4.txt: rmcvpjvyevffpvfbyefewkfthyifavyoatfrdpmudfbgfgem
+project6_files/fileB5.txt: kbuwghrhklgbdbnaryojsbtdxflyapidjh
+project6_files/fileB6.txt: tcvbmtbnanrywrhohojgqkjwrinmxmrsndlqtneml
+project6_files/fileB7.txt: saymygslefwsnhvwsdqwxphxlmv
+project6_files/fileB8.txt: eonafqwemuxodilliznfrw
+project6_files/fileB9.txt: dsdevbkcdwxhojvcmwwamaowqkmslskowhrgjvcjes
+project6_files/fileB10.txt: plfhglktylmbfsgsvocvnwztqjzvajnqtubgpctbdytyeltun
+EOF
+endCase
+

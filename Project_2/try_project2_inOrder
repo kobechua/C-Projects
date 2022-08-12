@@ -1,0 +1,51 @@
+#iAuthor: Jing Wang, for Program Design
+# This is a Unix shell script that will be used to test project 2, problem #2.
+# To use the script, copy it into the same directory as your scource file
+# Set execute permission for the file by issuing the command:
+# chmod +x try_project2_inOrder
+# Compile your program, producing a.out as the executable
+# To run the script, type 
+# ./try_project2_inOrder
+# The user input from the script will not be shown on the screen.
+# Compare the results from your program with the expected results on the test cases.
+echo '===================================================='
+./a.out <<-EndOfInput
+AGS
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo 'Enter input: AGS'
+echo 'Output: In order'
+echo '===================================================='
+./a.out <<-EndOfInput
+kevin
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo 'Enter input: kevin'
+echo 'Output: Not in order' 
+echo '===================================================='
+./a.out <<-EndOfInput
+_time_zone
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo 'Enter input: _time_zone'
+echo 'Output: Not in order' 
+echo '===================================================='
+./a.out <<-EndOfInput
+No
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo 'Enter input: No'
+echo 'Output: In order' 
+echo '===================================================='
+./a.out <<-EndOfInput
+37
+EndOfInput
+echo '----------------------------------------------------'
+echo 'Expected:'
+echo 'Enter input: 37'
+echo 'Output: Not in order' 
+echo '===================================================='
